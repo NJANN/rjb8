@@ -1,0 +1,79 @@
+<!--未注册用户通过微信搜索到图书馆公众号。进入公众号后，用户可以通过自己的手机号、微信id进行注册。注册过程中用户需要提交自己的身份信息。
+注：只有注册过的用户才能够借阅图书。-->
+
+<view class="regi cl">
+    <view class="title">填入以下信息</view>
+    <view class="name pa cl la">
+         <view class="lable fl">昵称:</view>
+         <view class="section">
+             <input placeholder="" auto-focus maxlength="24" />
+         </view>
+    </view>
+    <view class="phone pa cl"> 
+         <view class="lable fl">手机号:</view>
+         <view class="section">
+             <input placeholder="" auto-focus maxlength="11"/>
+         </view>
+    </view>
+    <view class="wxid pa cl">  
+         <view class="lable fl">微信id:</view>
+         <view class="section">
+            <input placeholder="" auto-focus maxlength="24"/>
+         </view>
+    </view>
+    <view class="password pa cl">    
+         <view class="lable fl">密码:</view>
+         <view class="section">
+            <input placeholder="6-12位" auto-focus password="true" maxlength="12"/>
+         </view>
+    </view>
+    <view class="repassword pa cl">  
+         <view class="lable fl">重复密码:</view>
+         <view class="section">
+            <input placeholder="" auto-focus password="true" maxlength="12"/>
+         </view>
+    </view>
+    <view class="name1 pa cl">  
+         <view class="lable fl">姓名:</view>
+         <view class="section">
+            <input placeholder="真实姓名" auto-focus type="text" maxlength="24"/>
+         </view>
+    </view>
+    <view class="idnumber pa cl">  
+        <view class="lable fl">身份证号:</view>
+        <view class="section">
+            <input placeholder="" auto-focus type="idcard" maxlength="24"/>
+        </view>
+    </view>
+<!--管理员层-->
+    <view class="guanli pa1 cl">  
+        <view class="lable1 fl">是否管理员:</view>
+        <view class="radio-group1 fl">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{items}}">
+                    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+        <view class="guanxx cl pa">
+             <view class="lable1 fl">管理员信息(如下）：</view>
+        </view>
+        <view class="danwei pa cl">  
+             <view class="lable fl">工作单位:</view>
+             <view class="section">
+                 <input placeholder="图书馆名称" auto-focus maxlength="24" disabled="true"/>
+             </view>
+        </view>
+
+       <view class="guanliid pa cl">
+             <view class="lable2 fl">管理员工号:</view>
+             <view class="section">
+                 <input placeholder="" auto-focus maxlength="12" disabled="true"/>
+             </view>
+       </view>
+    </view>
+
+<view class="put fl"><button class="put1" size="mini" bindtap="default"> 提交 </button></view>
+  
+ 
+</view>

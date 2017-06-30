@@ -1,0 +1,6 @@
+/* pages/detail/detail.wxss */
+.fav_image {
+    width: 64rpx;
+    height: 59rpx;
+    padding-top: 40rpx;
+}
